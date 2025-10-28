@@ -1,0 +1,31 @@
+{
+  "name": "color-picker",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/danilT9/color-picker#readme",
+  "bugs": {
+    "url": "https://github.com/danilT9/color-picker/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danilT9/color-picker.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel serve ./src/index.html",
+    "build": "parcel build ./src/index.html --no-cache --public-url ./",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "re": "npm run predeploy && git add . && git commit -m main && git push origin main && npm run deploy",
+    "all": "npm install --save-dev parcel-reporter-clean-dist handlebars parcel gh-pages"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0",
+    "handlebars": "^4.7.8",
+    "parcel": "^2.16.0",
+    "parcel-reporter-clean-dist": "^1.0.4"
+  }
+}
